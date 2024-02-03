@@ -5,24 +5,28 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/caravan/#",
+  base: "/",
+  server: {
+    port: 8080
+  },
+  // base: "/caravan/#",
   resolve: {
     alias: {
-      utils: path.resolve(__dirname, "./src/utils"),
-    },
+      utils: path.resolve(__dirname, "./src/utils")
+    }
   },
   plugins: [
     react(),
     nodePolyfills({
-      protocolImports: true,
-    }),
+      protocolImports: true
+    })
   ],
   build: {
-    outDir: "build",
+    outDir: "dist"
   },
   define: {
     __GIT_SHA__: JSON.stringify(process.env.__GIT_SHA__),
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version)
   },
   optimizeDeps: {
     include: [
@@ -32,6 +36,6 @@ export default defineConfig({
       */
       // "unchained-bitcoin",
       // "unchained-wallets",
-    ],
-  },
+    ]
+  }
 });
