@@ -5,7 +5,7 @@ import {
   // Router,
   Route,
   Switch,
-  Redirect
+  Redirect,
 } from "react-router-dom";
 
 // Components
