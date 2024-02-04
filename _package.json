@@ -3,7 +3,6 @@
   "version": "1.0.2",
   "description": "Unchained Capital's Bitcoin Multisig Application",
   "main": "index.jsx",
-  "proxy": "https://cors-anywhere.herokuapp.com/",
   "publicPrivate": true,
   "type": "module",
   "repository": {
@@ -17,9 +16,6 @@
   },
   "homepage": "https://unchained-capital.github.io/caravan",
   "engineStrict": true,
-  "engines": {
-    "node": ">=20"
-  },
   "overrides": {
     "jspdf": "2.5.1",
     "@ledgerhq/hw-transport-webusb": {

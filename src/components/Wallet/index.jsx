@@ -362,7 +362,7 @@ class CreateWallet extends React.Component {
               component="span"
               style={{ marginTop: "20px" }}
             >
-              Import Wallet Configuration
+              Import Wallet Configuration :D
             </Button>
           </label>
           <FormHelperText error>{configError}</FormHelperText>

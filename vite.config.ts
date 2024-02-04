@@ -7,7 +7,15 @@ import path from "path";
 export default defineConfig({
   base: "/",
   server: {
-    port: 8080
+    port: 8080,
+    proxy: {
+      // Přesměrování požadavků /api na https://mempool.space/api/
+    //   '/api': {
+    //     target: 'https://mempool.space/api/',
+    //     changeOrigin: true, // nutné pro domény s jiným původem
+    //     rewrite: (path) => path.replace(/^\/api/, ''), // odstranění /api z cesty
+    //   },
+    },
   },
   // base: "/caravan/#",
   resolve: {
