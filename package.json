@@ -16,9 +16,6 @@
   },
   "homepage": "https://unchained-capital.github.io/caravan",
   "engineStrict": true,
-  "engines": {
-    "node": ">=20"
-  },
   "overrides": {
     "jspdf": "2.5.1",
     "@ledgerhq/hw-transport-webusb": {
