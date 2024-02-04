@@ -10,11 +10,14 @@ export default defineConfig({
     port: 8080,
     proxy: {
       // Přesměrování požadavků /api na https://mempool.space/api/
-    //   '/api': {
-    //     target: 'https://mempool.space/api/',
-    //     changeOrigin: true, // nutné pro domény s jiným původem
-    //     rewrite: (path) => path.replace(/^\/api/, ''), // odstranění /api z cesty
-    //   },
+      '/api': {
+        target: 'https://mempool.space/api/',
+        changeOrigin: true, // nutné pro domény s jiným původem
+        rewrite: (path) =>{
+          console.log('qqq path', path)
+         return  path.replace(/^\/api/, '')
+        }, // odstranění /api z cesty
+      },
     },
   },
   // base: "/caravan/#",

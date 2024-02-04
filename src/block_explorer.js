@@ -4,7 +4,7 @@ import { satoshisToBitcoins, blockExplorerAPIURL } from "unchained-bitcoin";
 
 // FIXME: hack
 const delay = () => {
-  return new Promise((resolve) => setTimeout(resolve, 500));
+  return new Promise((resolve) => setTimeout(resolve, 7000));
 };
 
 /**
@@ -19,6 +19,7 @@ export async function blockExplorerGetAddresesUTXOs(address, network) {
       blockExplorerAPIURL(`/address/${address}/utxo`, network)
     );
     const utxos = utxosResult.data;
+    await delay();
     return await Promise.all(
       utxos.map(async (utxo) => {
         // FIXME: inefficient, need to cache here by utxo.txid
